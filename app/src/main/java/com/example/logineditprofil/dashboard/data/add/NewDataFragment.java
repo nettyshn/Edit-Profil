@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import com.example.logineditprofil.R;
@@ -34,7 +34,7 @@ public class NewDataFragment extends Fragment {
 
     private View view;
     @BindView(R.id.coordinator_layout_fragment_new_data)
-    CoordinatorLayout coordinatorLayout;
+    ConstraintLayout coordinatorLayout;
     @BindView(R.id.edit_text_title_fragment_new_data)
     EditText editTextTitle;
     @BindView(R.id.edit_text_content_fragment_new_data)

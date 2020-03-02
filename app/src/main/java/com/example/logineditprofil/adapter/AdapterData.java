@@ -42,7 +42,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.ViewHolder> {
         holder.textViewTitle.setText(data.getTitle());
         holder.textViewContent.setText(data.getContent());
     }
-    //Netty Cantik sekali
+    //Netty Cans
     @Override
     public int getItemCount() {
         return listData.size();

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,14 +20,26 @@ import com.example.logineditprofil.main.MainActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
+import butterknife.BindView;
+
 public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    @BindView(R.id.text_view_nama_nav_header_dashboard)
+    TextView nameUser;
+
+
+    private FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_dashboard);
         setSupportActionBar(toolbar);
+        String name = "";
+        name = firebaseAuth.getInstance().getCurrentUser().getEmail();
+        nameUser.setText("jgyigiu");
+
+
 
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.frame_layout_content_dashboard, new HomeFragment(), HomeFragment.class.getSimpleName())

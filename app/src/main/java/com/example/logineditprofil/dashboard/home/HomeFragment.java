@@ -51,7 +51,10 @@ import butterknife.OnClick;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment {
+public class
+
+
+HomeFragment extends Fragment {
 
     private static final String TAG = "HomeFragmentTAG";
     private View view;
